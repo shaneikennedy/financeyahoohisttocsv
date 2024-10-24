@@ -7,7 +7,6 @@ const args = process.argv.slice(2);
 
 // Get the user's home directory
 const homeDirectory = os.homedir();
-const ticker = "AAPL";
 
 function oneYearAgo(): Date {
   let d = new Date(0);
@@ -29,7 +28,7 @@ try {
   const csv = parse(response, { fields });
 
   // Write CSV to a file
-  const filename = `${homeDirectory}/Desktop/${ticker}_${response[0].date.toISOString()}_${response[response.length - 1].date.toISOString()}.csv`;
+  const filename = `${homeDirectory}/Desktop/${args[0]}_${response[0].date.toISOString()}_${response[response.length - 1].date.toISOString()}.csv`;
   fs.writeFileSync(filename, csv);
 
   console.log(`CSV file successfully written to ${filename}`);
