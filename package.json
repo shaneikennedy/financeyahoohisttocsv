@@ -1,6 +1,6 @@
 {
   "name": "financeyahoohisttocsv",
-  "module": "index.ts",
+  "module": "index.js",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
