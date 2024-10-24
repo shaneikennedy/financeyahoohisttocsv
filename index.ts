@@ -1,3 +1,5 @@
+#!/usr/bin/env bun
+
 import yahooFinance from "yahoo-finance2";
 import { parse } from "json2csv";
 import * as fs from "fs";
